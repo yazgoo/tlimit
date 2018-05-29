@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "version": "0.1",
+  "name": "tlimit",
+  "background": {
+    "scripts": ["tlimit.js"]
+  },
+  "permissions": ["tabs", "storage"],
+  "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "default_title": "tlimit",
+    "default_popup": "popup/tlimit.html"
+  }
+}
