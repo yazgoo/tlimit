@@ -7,7 +7,7 @@
   },
   "permissions": ["tabs", "storage"],
   "browser_action": {
-    "default_icon": "icons/beasts-32.png",
+    "default_icon": "icons/tlimit-32.png",
     "default_title": "tlimit",
     "default_popup": "popup/tlimit.html"
   }
