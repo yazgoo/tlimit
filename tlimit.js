@@ -1,7 +1,8 @@
-if(window.tlimit_count == undefined)
-  window.tlimit_count = 10
+if(window.localStorage.getItem("tlimit_count") == undefined)
+  window.localStorage.setItem("tlimit_count", "" + 10)
 browser.tabs.onCreated.addListener(t=> {
   browser.tabs.query({currentWindow: true}).then( tabs => {
-    if(tabs.length > window.tlimit_count) browser.tabs.remove(t.id)
+    var val = parseInt(window.localStorage.getItem("tlimit_count"))
+    if(tabs.length > val) browser.tabs.remove(t.id)
   })
 })

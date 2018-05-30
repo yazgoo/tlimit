@@ -1,7 +1,7 @@
 browser.runtime.getBackgroundPage().then(win => {
   function showVal() {
     var val = document.getElementById("val")
-    val.value = "" + win.tlimit_count
+    val.value = "" + win.localStorage.getItem("tlimit_count")
     val.size = val.value.length
   }
   function updateVal() {
@@ -10,12 +10,16 @@ browser.runtime.getBackgroundPage().then(win => {
     if (isNaN(value)) {
       showVal()
     } else {
-      win.tlimit_count = value
+      win.localStorage.setItem("tlimit_count", "" + value)
     }
   }
   function limit(increment) {
-    if ((win.tlimit_count + increment) > 1)
-      win.tlimit_count += increment
+    var val = parseInt(win.localStorage.getItem("tlimit_count"))
+    if ((val + increment) > 1)
+    {
+      val += increment
+      win.localStorage.setItem("tlimit_count", "" + val)
+    }
     showVal()
   }
   document.getElementById("minus").addEventListener("click", e => limit(-1))
