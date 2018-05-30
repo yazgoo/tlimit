@@ -5,6 +5,10 @@
   "background": {
     "scripts": ["tlimit.js"]
   },
+  "icons": {
+    "48": "icons/tlimit-48.png",
+    "32": "icons/tlimit-32.png"
+  },
   "permissions": ["tabs", "storage"],
   "browser_action": {
     "default_icon": "icons/tlimit-32.png",
