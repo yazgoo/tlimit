@@ -1,13 +1,9 @@
 {
   "manifest_version": 2,
-  "version": "0.7",
+  "version": "0.8",
   "name": "tlimit",
   "background": {
     "scripts": ["tlimit.js"]
-  },
-  "icons": {
-    "48": "icons/tlimit-48.png",
-    "32": "icons/tlimit-32.png"
   },
   "permissions": ["tabs", "storage"],
   "browser_action": {

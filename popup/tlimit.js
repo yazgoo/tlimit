@@ -2,6 +2,7 @@ browser.runtime.getBackgroundPage().then(win => {
   function showVal() {
     var val = document.getElementById("val")
     val.value = "" + win.localStorage.getItem("tlimit_count")
+    win.drawIcon(val.value)
     val.size = val.value.length
   }
   function updateVal() {
